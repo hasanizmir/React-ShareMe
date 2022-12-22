@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 import { client } from "../client";
-import { Circles } from "react-loader-spinner";
+import Spinner from './Spinner'
 import { categories } from "../utils/data";
 
 const CreatePin = ({ user }) => {
@@ -93,7 +93,7 @@ const CreatePin = ({ user }) => {
       <div className="flex lg:flex-row flex-col justify-center items-center bg-white lg:p-5 p-3 lg:w-4/5 w-full">
         <div className="bg-secondaryColor p-3 flex-0.7 w-full">
           <div className="flex justify-center items-center flex-col border-2 border-dotted border-gray-300 p-3 w-full h-420">
-            {loading && <Circles />}
+            {loading && <Spinner />}
             {wrongImageType && <p>Wrong image Type</p>}
             {!imageAsset ? (
               <label>
@@ -147,6 +147,7 @@ const CreatePin = ({ user }) => {
                 src={user.image}
                 className="w-10 h-10 rounded-full"
                 alt="user-profile"
+                referrerPolicy="no-referrer"
               />
               <p className="font-bold">{user.userName}</p>
             </div>
