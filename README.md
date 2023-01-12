@@ -1,6 +1,6 @@
 # React-ShareMe
 
-React
-Tailwind
-Sanity
-Google OAuth
+- React
+- Tailwind
+- Sanity
+- Google OAuth
